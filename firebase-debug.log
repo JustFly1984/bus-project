@@ -1,0 +1,71 @@
+[debug] [2020-08-27T16:10:54.517Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:10:54.519Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\garre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-08-27T16:10:54.519Z] CLI Version:   8.9.2
+[debug] [2020-08-27T16:10:54.519Z] Platform:      win32
+[debug] [2020-08-27T16:10:54.519Z] Node Version:  v12.14.1
+[debug] [2020-08-27T16:10:54.521Z] Time:          Thu Aug 27 2020 12:10:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-08-27T16:10:54.521Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:10:54.521Z] 
+[debug] [2020-08-27T16:10:54.528Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-27T16:10:54.529Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\garre\Documents\bus-project\bus-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2020-08-27T16:12:36.656Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:12:36.658Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\garre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-08-27T16:12:36.659Z] CLI Version:   8.9.2
+[debug] [2020-08-27T16:12:36.659Z] Platform:      win32
+[debug] [2020-08-27T16:12:36.659Z] Node Version:  v12.14.1
+[debug] [2020-08-27T16:12:36.660Z] Time:          Thu Aug 27 2020 12:12:36 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-08-27T16:12:36.660Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:12:36.660Z] 
+[debug] [2020-08-27T16:12:36.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-27T16:12:36.667Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\garre\Documents\bus-project\bus-project
+
+[debug] [2020-08-27T16:12:53.132Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:12:53.135Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\garre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-08-27T16:12:53.135Z] CLI Version:   8.9.2
+[debug] [2020-08-27T16:12:53.135Z] Platform:      win32
+[debug] [2020-08-27T16:12:53.135Z] Node Version:  v12.14.1
+[debug] [2020-08-27T16:12:53.137Z] Time:          Thu Aug 27 2020 12:12:53 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-08-27T16:12:53.137Z] ----------------------------------------------------------------------
+[debug] [2020-08-27T16:12:53.137Z] 
+[debug] [2020-08-27T16:12:53.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-27T16:12:53.146Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\garre\Documents\bus-project\bus-project
+

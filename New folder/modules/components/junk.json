@@ -1,0 +1,66 @@
+// <MuiTextField
+//   InputProps={{
+//     ...disableUnderline,
+//     classes: {
+//       root: classes.root,
+//       input: clsx(
+//         classes.input,
+//         classes[inputSyleMapping[size]],
+//         {
+//           [classes.inputBorder]: !noBorder,
+//         },
+//         InputPropsClassesInput,
+//       ),
+//       disabled: classes.disabled,
+//       ...InputPropsClassesOther,
+//     },
+//     ...InputPropsOther,
+//   }}
+//   InputLabelProps={{
+//     ...InputLabelProps,
+//     shrink: true,
+//     className: classes.formLabel,
+//   }}
+//   SelectProps={{
+//     ...SelectProps,
+//     classes: {
+//       select: classes.select,
+//       icon: classes.selectIcon,
+//     },
+//   }}
+//   {...other}
+// />
+
+<MuiTextField
+  InputProps={{
+    ...disableUnderline,
+    classes: {
+      root: classes.root,
+      input: clsx(
+        classes.input,
+        classes[inputSyleMapping[size]],
+        {
+          [classes.inputBorder]: !noBorder,
+        },
+        InputPropsClassesInput,
+      ),
+      disabled: classes.disabled,
+      ...InputPropsClassesOther,
+    },
+    ...InputPropsOther,
+  }}
+  InputLabelProps={{
+    ...InputLabelProps,
+    shrink: true,
+    className: classes.formLabel,
+  }}
+  SelectProps={{
+    ...SelectProps,
+    classes: {
+      select: classes.select,
+      icon: classes.selectIcon,
+    },
+  }}
+  {...other}
+/>
+/*  justifyContent="flex-end" */
