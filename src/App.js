@@ -32,9 +32,9 @@ const theme = createMuiTheme({
 
 function App() {
  // const MapLoader = withScriptjs(Map);
- // 
+ //
  //   const { isLoaded, loadError } = useLoadScript({
- //   googleMapsApiKey:"AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo",
+ //   googleMapsApiKey:"your_api_key",
  //   // {...other options}
  // })
 
@@ -44,7 +44,7 @@ function App() {
         <LandingHome />
         <TextField id="standard-basic" label="Standard" />
         <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=your_api_key"
               loadingElement={<div style={{ height: `100%` }} />}
         />
 
