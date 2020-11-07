@@ -34,7 +34,7 @@ function App() {
  // const MapLoader = withScriptjs(Map);
  //
  //   const { isLoaded, loadError } = useLoadScript({
- //   googleMapsApiKey:"your_api_key",
+ //   googleMapsApiKey:"AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo",
  //   // {...other options}
  // })
 
@@ -44,7 +44,7 @@ function App() {
         <LandingHome />
         <TextField id="standard-basic" label="Standard" />
         <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=your_api_key"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo"
               loadingElement={<div style={{ height: `100%` }} />}
         />
 

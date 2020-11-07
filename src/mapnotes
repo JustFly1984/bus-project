@@ -1,0 +1,13 @@
+
+<DistanceMatrix
+ options={{
+   // destination: this.state.destination,
+   // origin: this.state.origin,
+   // travelMode: this.state.travelMode
+   destination: waypoints.destination,
+   origin:  waypoints.origin,
+   travelMode: value,
+         }}
+ // callback = {(response) => {console.log('teh callback repsonse is '+response) ;
+ // console.log('got a response dms')}}
+/>

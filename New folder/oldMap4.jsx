@@ -139,13 +139,13 @@ Function Map() {
 
   render () {
     // const { isLoaded, loadError } = useLoadScript({
-    //   googleMapsApiKey:"your_api_key",
+    //   googleMapsApiKey:"AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo",
     //   // {...other options}
     // })
 
     const { isLoaded } = useLoadScript({
   // Enter your own Google Maps API key
-  googleMapsApiKey: "your_api_key"
+  googleMapsApiKey: "AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo"
 });
 
 
