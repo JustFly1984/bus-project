@@ -42,7 +42,6 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <LandingHome />
-        <TextField id="standard-basic" label="Standard" />
         <Map
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo"
               loadingElement={<div style={{ height: `100%` }} />}

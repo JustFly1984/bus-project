@@ -54,7 +54,7 @@ function Map() {
        //   setCategories(data.value); // <-- will update state and trigger render
        // });
        console.log('USEEFFECT the callback repsonse is '+ JSON.stringify(response)) ;
-       console.log('')
+       // console.log('')
        // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
        setDirections(response)
 
@@ -70,18 +70,18 @@ function Map() {
           console.log("response status: "+response.status)
           if (response.status === 'OK') {
             setDirections(response);
-            console.log(response);
-            console.log('set directions')
+            // console.log(response);
+            // console.log('set directions')
           } else {
-            console.log('response status: '+response.status  );
-            console.log('response: ', Object.values( response) );
-            console.log('string response: ', JSON.stringify(response) );
+            // console.log('response status: '+response.status  );
+            // console.log('response: ', Object.values( response) );
+            // console.log('string response: ', JSON.stringify(response) );
           }
         }
-        console.log('null response')
-        console.log('the callback repsonse is '+ JSON.stringify(response)) ;
+        // console.log('null response')
+        // console.log('the callback repsonse is '+ JSON.stringify(response)) ;
         // setDirections(response)
-        console.log('leaving the callback') ;
+        // console.log('leaving the callback') ;
 
 
           // useEffect(() => {
@@ -141,9 +141,9 @@ const onClick =  () => {
   // waypoints.origin = originHolder
   // waypoints.destination = destinationHolder
   setValue(methodHolder);
-  console.log(methodHolder)
-  console.log(originHolder)
-  console.log(destinationHolder)
+  // console.log(methodHolder)
+  // console.log(originHolder)
+  // console.log(destinationHolder)
   // updateApiFlag(true)
   apiCallFlag = true
 };
@@ -189,13 +189,13 @@ function debounce (callback, interval) {
        //   }
        //  )
      const renderMap = () => {
-       console.log('RENDERING MAP')
-       console.log('origin: '+waypoints.origin)
-       console.log('desitnation: ' +waypoints.destination)
-       console.log('response: '+ Object.values(response))
-       console.log('value: '+value)
-       console.log('isloaded: '+ isLoaded)
-       console.log("end of rendermap vars")
+       // console.log('RENDERING MAP')
+       // console.log('origin: '+waypoints.origin)
+       // console.log('desitnation: ' +waypoints.destination)
+       // console.log('response: '+ Object.values(response))
+       // console.log('value: '+value)
+       // console.log('isloaded: '+ isLoaded)
+       // console.log("end of rendermap vars")
 
         return (
           <div className='map'>
@@ -203,25 +203,7 @@ function debounce (callback, interval) {
               <hr className='mt-0 mb-3' />
 
               <div className='row'>
-                <div className='col-md-6 col-lg-4'>
-                  <div className='form-group'>
-                    <label htmlFor='ORIGIN'>Origin</label>
-                    <br />
-                    <input id='ORIGIN' className='form-control' type='text'
-                     // ref={this.getOrigin}
-                     />
-                  </div>
-                </div>
 
-                <div className='col-md-6 col-lg-4'>
-                  <div className='form-group'>
-                    <label htmlFor='DESTINATION'>Destination</label>
-                    <br />
-                    <input id='DESTINATION' className='form-control' type='text'
-                     // ref={this.getDestination}
-                     />
-                  </div>
-                </div>
                 <div>
                 <FormControl variant="filled">
                  <InputLabel htmlFor="component-filled">Origin</InputLabel>
@@ -328,19 +310,19 @@ function debounce (callback, interval) {
                         //
                         //  }, []); // <-- empty dependency is run once on component mount
 
-                         console.log('the callback repsonse is '+
+                         // console.log('the callback repsonse is '+
                           // JSON.stringify(
-                            Object.values(
-                              response
-                            )
+                            // Object.values(
+                            //   response
+                            // )
                           // )
-                        ) ;
-                         console.log('got a response ln 272')
+                        // ) ;
+                         // console.log('got a response ln 272')
                          // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
                          debounce(setDirections(response), 3000)
                          let newcount = count + 1
                          setCounter(newcount)
-                         console.log('count:'+count)
+                         // console.log('count:'+count)
 
                       }}
 
@@ -363,7 +345,8 @@ function debounce (callback, interval) {
                   console.log('response status:' +response.status)}
                   {
                   response !== null && (
-                    <RenderDirections
+                    <div>
+                      <RenderDirections
                       // required
                       options={{ /* // eslint-disable-line react-perf/jsx-no-new-object-as-prop*/
                         // directions: this.state.response
@@ -380,11 +363,34 @@ function debounce (callback, interval) {
                       onUnmount={directionsRenderer => {
                         console.log('DirectionsRenderer onUnmount directionsRenderer: ', directionsRenderer)
                       }}
-
                     />
+                    <DistanceMatrix
+
+                    options={{
+                      // destination: this.state.destination,
+                      // origin: this.state.origin,
+                      // travelMode: this.state.travelMode
+                      destination: waypoints.destination,
+                      origin:  waypoints.origin,
+                      travelMode: value,
+                            }}
+                    />
+                    </div>
                   )
                 }
+{
+  <DistanceMatrix
 
+  options={{
+    // destination: this.state.destination,
+    // origin: this.state.origin,
+    // travelMode: this.state.travelMode
+    destination: waypoints.destination,
+    origin:  waypoints.origin,
+    travelMode: value,
+          }}
+  />
+}
 
 
               </GoogleMap>
@@ -392,8 +398,8 @@ function debounce (callback, interval) {
           </div>
         );
       };
-      console.log('310')
-      console.log('isloaded : ' + isLoaded)
+      // console.log('310')
+      // console.log('isloaded : ' + isLoaded)
 
       // {
         // updateApiFlag(false)

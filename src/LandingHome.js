@@ -13,7 +13,8 @@ const LandingHome = () => {
 
   const GetJobs = () => {
     console.log('here');
-    let url = "https://indreed.herokuapp.com/api/jobs?q=JavaScript&l=New%20York&country=us"
+    // <span class="url" data-key="url">/api/jobs?l=Lagos&amp;country=ng&amp;sort=date&amp;jt=contract&amp;radius=25</span>
+    let url = "https://cors-anywhere.herokuapp.com/https://indreed.herokuapp.com/api/jobs?q=dry%20cleaning&l=Cincinnati&country=us&amp;sort=date&amp;radius=25"
     fetch(url)
       .then(function(response) {
         console.log(response);

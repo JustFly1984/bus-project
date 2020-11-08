@@ -45,23 +45,23 @@ function DistanceMatrix() {
 // This is currently unused, but was the callback to DirectionsService before I turned to console debugging as the callback
     const directionsCallback = () => {
 
-        console.log("response : "+response + JSON.stringify(response))
+        console.log("DM response : "+response + JSON.stringify(response))
         if (response !== null) {
-          console.log("response status: "+response.status)
+          console.log("DM response status: "+response.status)
           if (response.status === 'OK') {
             setDirections(response);
             console.log(response);
-            console.log('set directions')
+            console.log('DM set directions')
           } else {
-            console.log('response status: '+response.status  );
-            console.log('response: ', response );
-            console.log('string response: ', JSON.stringify(response) );
+            console.log('DM response status: '+response.status  );
+            console.log('DM response: ', response );
+            console.log('DM string response: ', JSON.stringify(response) );
           }
         }
-        console.log('null response')
-        console.log('the callback repsonse is '+ JSON.stringify(response)) ;
+        console.log('DM null response')
+        console.log('DM the callback repsonse is '+ JSON.stringify(response)) ;
         // setDirections(response)
-        console.log('leaving the callback') ;
+        console.log('DM leaving the callback') ;
 
 
           // useEffect(() => {
@@ -115,8 +115,13 @@ function DistanceMatrix() {
                    origin:  waypoints.origin,
                    travelMode: value,
                          }}
-                 callback = {(response) => {console.log('teh callback repsonse is '+response) ;
-                 console.log('got a response dms')}}
+                   onLoad={
+                          DistanceMatrixService => {
+                          console.log('DistanceMatrixService onLoad DistanceMatrixService: ', DistanceMatrixService)
+                        }
+                      }
+                 callback = {(response) => {console.log('DM teh callback repsonse is '+response) ;
+                 console.log('DM got a response dms')}}
                 />
               // </GoogleMap>
           //   </div>
