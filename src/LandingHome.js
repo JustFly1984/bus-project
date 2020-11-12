@@ -1,15 +1,17 @@
 import React from 'react';
 import LandingHomeAppBar from './LandingHomeAppBar.js';
+import SearchPage from './SearchPage.js';
+import SearchButton from './SearchButton.js';
 import Button from '@material-ui/core/Button';
 
 
-
-
-
+import { useRouter } from "./util/router.js";
 
 
 
 const LandingHome = () => {
+
+  const router = useRouter();
 
   const GetJobs = () => {
     console.log('here');
@@ -28,11 +30,20 @@ const LandingHome = () => {
 
 
   }
+  const PricingRoute = () => {
+    router.push("/search");
+  }
 
   return (
     <div>
     <LandingHomeAppBar />
-    <Button onClick={GetJobs} >GetJobs</Button>
+    // <Button onClick={GetJobs} >GetJobs</Button>
+    // <Button onClick={PricingRoute} > search for jobs</Button>
+    <SearchButton
+    buttonOnClick={() => {
+      router.push("/search");
+    }}
+    />
     </div>
   );
 }

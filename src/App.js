@@ -2,12 +2,19 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import LandingHome from './LandingHome.js';
+import LandingHome from './LandingHome';
+import SearchPage from './SearchPage';
+
+
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Input from '@material-ui/core/Input';
 import grey from '@material-ui/core/colors/grey';
 import Map from './Map.jsx';
+
+import { ProvideAuth } from "./util/auth.js";
+import { Switch, Route, Router } from "./util/router.js";
 import { withScriptjs } from "react-google-maps";
 // const ScriptLoaded = require("../../docs/ScriptLoaded").default;
 
@@ -40,17 +47,37 @@ function App() {
 
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <LandingHome />
-        <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdVcGctD6SNcD8sIJ7BbVNLwBat_fWHVo"
-              loadingElement={<div style={{ height: `100%` }} />}
-        />
-
-
-      </ThemeProvider>
+      <ProvideAuth>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={SearchPage} />
+              <Route exact path="/search" component={SearchPage} />
+              <Route exact path="/map" component={Map} />
+              <Route
+                component={({ location }) => {
+                  return (
+                    <div
+                      style={{
+                        padding: "50px",
+                        width: "100%",
+                        textAlign: "center"
+                      }}
+                    >
+                      The page <code>{location.pathname}</code> could not be
+                      found.
+                    </div>
+                  );
+                }}
+              />
+            </Switch>
+          </Router>
+        </ThemeProvider>
+      </ProvideAuth>
     </div>
   );
 }
+
+//             <Route exact path="/search" component={SearchPage} />
 
 export default App;
