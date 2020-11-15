@@ -1,3 +1,87 @@
+<DirectionsService
+  // required
+/*global google  // eslint-disable-line react-perf/jsx-no-new-object-as-prop */
+  options={{
+    // destination: this.state.destination,
+    destination: waypoints.destination,
+    // origin: this.state.origin,
+    origin:  waypoints.origin,
+    // travelMode: this.state.travelMode
+    travelMode: value,
+  }}
+  // returns an empty response
+  // callback={directionsCallback}
+
+
+
+  callback = {(response) => {
+
+    // useEffect(() => {
+    //    // getRequest(consts.categoriesURL).then(data => {
+    //    //   setCategories(data.value); // <-- will update state and trigger render
+    //    // });
+    //    console.log('the callback repsonse is '+ JSON.stringify(response)) ;
+    //    console.log('got a response ln 272')
+    //    // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
+    //    setDirections(response)
+    //
+    //  }, []); // <-- empty dependency is run once on component mount
+
+     // console.log('the callback repsonse is '+
+      // JSON.stringify(
+        // Object.values(
+        //   response
+        // )
+      // )
+    // ) ;
+     // console.log('got a response ln 272')
+     // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
+     debounce(setDirections(response), 3000)
+     let newcount = count + 1
+     setCounter(newcount)
+     // console.log('count:'+count)
+
+  }}
+
+
+
+  // optional
+  onLoad={directionsService => {
+    console.log('DirectionsService onLoad directionsService: ', directionsService)
+  }}
+  // optional
+  onUnmount={directionsService => {
+    console.log('DirectionsService onUnmount directionsService: ', directionsService)
+  }}
+/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <DistanceMatrix
  options={{

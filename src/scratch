@@ -1,0 +1,45 @@
+<JobRequestFeed
+  apiResponse={myJson}
+  apiStatus={responseStatus}
+  />
+
+
+this wrked
+
+  {
+    jsonResponse != "" &&
+    jsonResponse.map((value, index) => {
+      console.log(value)
+      console.log(index)
+      console.log(jsonResponse[1])
+    return(
+      <div key={index}>
+        {value.title}
+      </div>
+    )
+  })}
+
+
+
+
+
+
+
+
+  <li key={index}>{value.company}</li>
+  <li key={index}>{value.title}</li>
+  <li key={index}>{value.date}</li>
+  <li key={index}>{value.location}</li>
+  <li key={index}>{value.summary}</li>
+
+
+
+
+
+
+  <Typography variant="body2" component="p">
+    {summary}
+    well meaning and kindly.
+    <br />
+    {'"a benevolent smile"'}
+  </Typography>

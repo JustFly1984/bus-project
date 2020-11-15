@@ -1,6 +1,6 @@
 /*THIS IS THE STATELESS VERSION OF THE MAP COMPONENT*/
 /*global google*/
-import React, { useEffect, Component } from "react";
+import React, { useEffect,  Component } from "react";
 
 import {
   GoogleMap,
@@ -31,6 +31,9 @@ let originHolder
 let destinationHolder
 let methodHolder
 let apiCallFlag = false
+const google = window.google;
+
+
 
 function Map() {
 
@@ -98,6 +101,19 @@ function Map() {
 
     };
 
+    const directionService = new google.maps.DirectionsService()
+    directionService.route({
+        destination: new google.maps.LatLng(waypoints.desitnation),
+        origin: new google.maps.LatLng(waypoints.origin),
+        travelMode: google.maps.TravelMode.DRIVING
+    }, (response, status) => {
+        if (status === google.maps.DirectionsStatus.OK) {
+            // update direction state
+        }
+    })
+
+
+
 
 
   const handleChange = (event) => {
@@ -146,6 +162,7 @@ const onClick =  () => {
   // console.log(destinationHolder)
   // updateApiFlag(true)
   apiCallFlag = true
+  directionService();
 };
 
 
@@ -281,62 +298,8 @@ function debounce (callback, interval) {
                     // apiCallFlag == true
 
                   ) && (
-                    <DirectionsService
-                      // required
-                    /*global google  // eslint-disable-line react-perf/jsx-no-new-object-as-prop */
-                      options={{
-                        // destination: this.state.destination,
-                        destination: waypoints.destination,
-                        // origin: this.state.origin,
-                        origin:  waypoints.origin,
-                        // travelMode: this.state.travelMode
-                        travelMode: value,
-                      }}
-                      // returns an empty response
-                      // callback={directionsCallback}
-
-
-
-                      callback = {(response) => {
-
-                        // useEffect(() => {
-                        //    // getRequest(consts.categoriesURL).then(data => {
-                        //    //   setCategories(data.value); // <-- will update state and trigger render
-                        //    // });
-                        //    console.log('the callback repsonse is '+ JSON.stringify(response)) ;
-                        //    console.log('got a response ln 272')
-                        //    // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
-                        //    setDirections(response)
-                        //
-                        //  }, []); // <-- empty dependency is run once on component mount
-
-                         // console.log('the callback repsonse is '+
-                          // JSON.stringify(
-                            // Object.values(
-                            //   response
-                            // )
-                          // )
-                        // ) ;
-                         // console.log('got a response ln 272')
-                         // when setDirections is called, we get an endless render and recall loop, but it actually renders the directions on the map
-                         debounce(setDirections(response), 3000)
-                         let newcount = count + 1
-                         setCounter(newcount)
-                         // console.log('count:'+count)
-
-                      }}
-
-
-
-                      // optional
-                      onLoad={directionsService => {
-                        console.log('DirectionsService onLoad directionsService: ', directionsService)
-                      }}
-                      // optional
-                      onUnmount={directionsService => {
-                        console.log('DirectionsService onUnmount directionsService: ', directionsService)
-                      }}
-                    />
+                    <div>
+                    </div>
                   )
                 }
 
